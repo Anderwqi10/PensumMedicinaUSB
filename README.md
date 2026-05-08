@@ -35,12 +35,5 @@ cd pensum-medicina
 
 Estructura del Proyecto
 
-pensum-medicina/
-│── index.html
-│── styles.css
-│── script.js
-│── pac/
-│   ├── I Semestre/
-│   ├── II Semestre/
-│   ├── ... XII Semestre/
+<img width="321" height="167" alt="image" src="https://github.com/user-attachments/assets/b90763d9-f511-47f9-acb9-b9428921d26d" />
 
