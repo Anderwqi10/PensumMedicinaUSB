@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pensum — Programa de Medicina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero__noise"></div>
+    <div class="hero__content">
+      <p class="hero__label">Universidad Simón Bolívar · Programa Académico</p>
+      <h1 class="hero__title">Medicina</h1>
+      <p class="hero__subtitle">Pensum académico · 12 semestres · Consulta el contenido programático de cada asignatura</p>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number" id="totalMaterias">—</span>
+          <span class="stat__label">Asignaturas</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number">12</span>
+          <span class="stat__label">Semestres</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number" id="totalPAC">—</span>
+          <span class="stat__label">PAC disponibles</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Explora el pensum</span>
+      <div class="hero__arrow"></div>
+    </div>
+  </header>
+
+  <section class="search-bar-section">
+    <div class="search-wrapper">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Buscar asignatura…"
+        autocomplete="off"
+      />
+      <button class="search-clear" id="searchClear" aria-label="Limpiar búsqueda">✕</button>
+    </div>
+    <div class="search-results-info" id="searchInfo"></div>
+  </section>
+
+  <main class="pensum" id="pensum">
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal__close" id="modalClose" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <div class="modal__header">
+        <p class="modal__semester-tag" id="modalSemester"></p>
+        <h2 class="modal__title" id="modalTitle"></h2>
+      </div>
+      <div class="modal__body">
+        <div class="pac-info" id="pacInfo">
+        </div>
+        <a class="modal__btn" id="modalBtn" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14,2 14,8 20,8"/>
+          </svg>
+          Ver PAC completo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Universidad Simón Bolívar · Programa de Medicina</p>
+    <p class="footer__note">Información académica oficial · Para más información comunícate con la dirección del programa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
