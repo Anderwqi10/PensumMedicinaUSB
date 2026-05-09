@@ -53,6 +53,8 @@ body {
   text-align: center;
   padding: 80px 24px 120px;
   overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero__noise {
@@ -796,4 +798,17 @@ mark {
 
 .electiva-opcion-btn:hover svg {
   stroke: var(--usb-green);
+}
+
+.image-container {
+  background: transparent;
+  padding: 4px 4px 50px 4px;
+  margin :  0 25px 0 ;
+}
+
+.logo__image {
+  background: transparent;
+  width: 320px;
+  height: 250px;
+  
 }
